@@ -35,12 +35,12 @@ public class Racing {
     void moveAhead(int randNum, int index) {
         Car localCar = carList.get(index);
         if (localCar.isCanMove(randNum)) {
-            localCar.moveCar();
+            localCar.moveCar(1);
         }
     }
 
     ArrayList<Car> cloneList(ArrayList<Car> cars) {
-        ArrayList<Car> toReturnList = new ArrayList<Car>();
+        ArrayList<Car> toReturnList = new ArrayList<>();
         for (Car car : cars) {
             toReturnList.add(cloneCar(car));
         }
@@ -73,7 +73,7 @@ public class Racing {
     }
 
     ArrayList<Car> loopResultListProc(int bestPosition) {
-        ArrayList<Car> returnList = new ArrayList<Car>();
+        ArrayList<Car> returnList = new ArrayList<>();
         for (int i = 0; i < carList.size(); i++) {
             addSpecificList(returnList, i, bestPosition);
         }
@@ -100,6 +100,10 @@ public class Racing {
 
     void insertCar(String name) {
         carList.add(new Car(name));
+    }
+
+    void insertCar(String name, int position) {
+        carList.add(new Car(name, position));
     }
 
     boolean checkMove(int toCheckValue, int toCheckIndex) {

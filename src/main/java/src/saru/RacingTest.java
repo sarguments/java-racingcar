@@ -15,22 +15,15 @@ public class RacingTest {
 	@Before
 	public void indiInit() {
 		indiRacing = new Racing();
-		indiRacing.insertCar("테스트카0");
-		indiRacing.insertCar("테스트카1");
-		indiRacing.insertCar("테스트카2");
-
-		indiRacing.moveAhead(9, 0);
-		indiRacing.moveAhead(9, 1);
-		indiRacing.moveAhead(9, 1);
-		indiRacing.moveAhead(9, 1);
-		indiRacing.moveAhead(9, 2);
-		indiRacing.moveAhead(9, 2);
+		indiRacing.insertCar("테스트카1", 1);
+		indiRacing.insertCar("테스트카2", 3);
+		indiRacing.insertCar("테스트카3", 2);
 	}
 
 	// (1) 4이상의 값이 경우 위치 값이 1 증가했는가?
 	@Test
-	public void valueIncreasAboveFour() {
-		indiRacing.insertCar("테스트카3");
+	public void valueIncreaseAboveFour() {
+		indiRacing.insertCar("테스트카4");
 
 		// 4 ~ 9까지의 랜덤값 테스트
 		int position = 1;
@@ -46,7 +39,7 @@ public class RacingTest {
 	// (2) 4미만의 값일 경우 위치 값이 증가하지 않았는가?
 	@Test
 	public void valueIncreaseBelowFour() {
-		indiRacing.insertCar("테스트카3");
+		indiRacing.insertCar("테스트카4");
 
 		// 0 ~ 3 까지의 랜덤값 테스트
 		for (int randValue = 0; randValue <= 3; randValue++) {
@@ -73,6 +66,6 @@ public class RacingTest {
 	public void getResultList() {
 		ArrayList<Car> cars = indiRacing.getResultList();
 
-		assertEquals("테스트카1", cars.get(0).getName());
+		assertEquals("테스트카2", cars.get(0).getName());
 	}
 }

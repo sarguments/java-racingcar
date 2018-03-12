@@ -26,8 +26,8 @@ public class Car {
 		return this.name;
 	}
 
-	void moveCar() {
-		this.position++;
+	void moveCar(int position) {
+		this.position += position;
 	}
 
 	boolean isCanMove(int randNum) {
