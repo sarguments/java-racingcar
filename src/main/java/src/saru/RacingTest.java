@@ -1,4 +1,4 @@
-package saru;
+package src.saru;
 
 import static org.junit.Assert.*;
 
@@ -45,7 +45,7 @@ public class RacingTest {
 
 	// (2) 4미만의 값일 경우 위치 값이 증가하지 않았는가?
 	@Test
-	public void valueIncreasBelowFour() {
+	public void valueIncreaseBelowFour() {
 		indiRacing.insertCar("테스트카3");
 
 		// 0 ~ 3 까지의 랜덤값 테스트

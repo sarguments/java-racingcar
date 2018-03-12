@@ -1,4 +1,4 @@
-package saru;
+package src.saru;
 
 public class Car {
 	private static final int GO_AHEAD_NUM = 4;

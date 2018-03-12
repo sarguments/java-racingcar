@@ -1,4 +1,4 @@
-package saru;
+package src.saru;
 
 import java.util.*;
 
@@ -26,7 +26,7 @@ public class Utils {
 		return runNum;
 	}
 
-	static void printCar(Car carList) {
+	private static void printCar(Car carList) {
 		System.out.print(carList.getName() + " : ");
 
 		for (int i = 0; i < carList.getPosition(); i++) {
